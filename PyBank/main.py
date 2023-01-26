@@ -64,6 +64,7 @@ with open(budget_data, "r") as csvfile:
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {total_months}")
+print(f"Total:${net_total}")
 print(f"Total: ${average_change}")
 print(f"Greatest Increase in Profits: {max_month} (${max_profit})")
 print(f"Greatest Decrease in Profits: {min_month}(${min_profit})")
@@ -79,6 +80,7 @@ with open(output_path,"w") as file:
     #second row
     csvwriter.writerow(["----------------------------"])
     #third row
+    csvwriter.writerow([f"Total:$ {net_total}"])
     csvwriter.writerow([f"Total Months: {total_months}"])
     #fourth row
     csvwriter.writerow([f"Total: ${average_change}"])
